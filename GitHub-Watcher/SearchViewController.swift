@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  GitHub-Watcher
 //
-//  Created by Julian Schenkemeyer on 22.11.22.
+//  Created by Julian Schenkemeyer on 24.11.22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
 	let labelView = UILabel()
 
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
 		view.backgroundColor = .systemBackground
 
-		labelView.text = "Hello world!"
+		labelView.text = "SearchViewController"
 
 		view.addSubview(labelView)
 		labelView.translatesAutoresizingMaskIntoConstraints = false
@@ -30,4 +30,3 @@ class ViewController: UIViewController {
 
 
 }
-
