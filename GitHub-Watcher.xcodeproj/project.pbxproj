@@ -22,6 +22,9 @@
 		B950B67429339BA700543BB5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67329339BA700543BB5 /* APIManager.swift */; };
 		B950B67629339E5300543BB5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67529339E5300543BB5 /* RequestManager.swift */; };
 		B950B6792933A05400543BB5 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6782933A05400543BB5 /* DataParser.swift */; };
+		B950B67B2933B6BA00543BB5 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67A2933B6BA00543BB5 /* UserRequest.swift */; };
+		B950B67E2933B9A600543BB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67D2933B9A600543BB5 /* User.swift */; };
+		B950B6802933B9BB00543BB5 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67F2933B9BB00543BB5 /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		B950B67329339BA700543BB5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B950B67529339E5300543BB5 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B950B6782933A05400543BB5 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		B950B67A2933B6BA00543BB5 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		B950B67D2933B9A600543BB5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B950B67F2933B9BB00543BB5 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		B9369295292D6D4900DA9419 /* GitHub-Watcher */ = {
 			isa = PBXGroup;
 			children = (
+				B950B67C2933B97000543BB5 /* Model */,
 				B950B669293374C700543BB5 /* Network */,
 				B9369296292D6D4900DA9419 /* AppDelegate.swift */,
 				B9369298292D6D4900DA9419 /* SceneDelegate.swift */,
@@ -106,6 +113,7 @@
 			children = (
 				B950B66A2933755D00543BB5 /* RequestProtocol.swift */,
 				B950B66C2933756C00543BB5 /* RequestType.swift */,
+				B950B67A2933B6BA00543BB5 /* UserRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -116,6 +124,15 @@
 				B950B6782933A05400543BB5 /* DataParser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		B950B67C2933B97000543BB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B950B67D2933B9A600543BB5 /* User.swift */,
+				B950B67F2933B9BB00543BB5 /* Follower.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,12 +206,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B950B67429339BA700543BB5 /* APIManager.swift in Sources */,
+				B950B67B2933B6BA00543BB5 /* UserRequest.swift in Sources */,
 				B950B6642930088800543BB5 /* SearchViewController.swift in Sources */,
+				B950B6802933B9BB00543BB5 /* Follower.swift in Sources */,
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
 				B9369297292D6D4900DA9419 /* AppDelegate.swift in Sources */,
 				B9369299292D6D4900DA9419 /* SceneDelegate.swift in Sources */,
 				B950B66B2933755D00543BB5 /* RequestProtocol.swift in Sources */,
 				B950B66629300A9F00543BB5 /* GWTabBarController.swift in Sources */,
+				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
 				B950B6622930086D00543BB5 /* FavoritesViewController.swift in Sources */,
 				B93692A1292D6D4900DA9419 /* GitHub_Watcher.xcdatamodeld in Sources */,
