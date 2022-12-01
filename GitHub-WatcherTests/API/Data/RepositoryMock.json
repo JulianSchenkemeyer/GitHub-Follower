@@ -1,0 +1,16 @@
+{
+	"id": 11,
+	"name": "repo1",
+	"full_name": "JulianSchenkemeyer/repo1",
+	"private": false,
+	"owner": {
+		"login": "JulianSchenkemeyer",
+		"avatar_url": "https://avatars.githubusercontent.com/u/10547673?v=4"
+	},
+	"has_issues": false,
+	"forks": 22,
+	"open_issues": 0,
+	"watchers": 500,
+	"default_branch": "main",
+	"pushed_at": "2015-01-15T13:57:25Z"
+}

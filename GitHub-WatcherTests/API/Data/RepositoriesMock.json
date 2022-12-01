@@ -1,0 +1,34 @@
+[
+	{
+		"id": 11,
+		"name": "repo1",
+		"full_name": "JulianSchenkemeyer/repo1",
+		"private": false,
+		"owner": {
+			"login": "JulianSchenkemeyer",
+			"avatar_url": "https://avatars.githubusercontent.com/u/10547673?v=4"
+		},
+		"has_issues": false,
+		"forks": 22,
+		"open_issues": 0,
+		"watchers": 500,
+		"default_branch": "main",
+		"pushed_at": "2022-11-10T18:38:56Z"
+	},
+	{
+		"id": 12,
+		"name": "repo2",
+		"full_name": "JulianSchenkemeyer/repo2",
+		"private": false,
+		"owner": {
+			"login": "JulianSchenkemeyer",
+			"avatar_url": "https://avatars.githubusercontent.com/u/10547673?v=4"
+		},
+		"has_issues": true,
+		"forks": 2,
+		"open_issues": 6,
+		"watchers": 50,
+		"default_branch": "main",
+		"pushed_at": "2022-12-10T18:38:56Z"
+	}
+]

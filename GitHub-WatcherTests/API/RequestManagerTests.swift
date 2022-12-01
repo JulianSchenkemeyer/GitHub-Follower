@@ -55,5 +55,39 @@ final class RequestManagerTests: XCTestCase {
 		let expectedDate = dateFormatter?.date(from: "2015-01-15T13:57:25Z")
 		XCTAssertEqual(user.createdAt, expectedDate)
 	}
+
+	func testGetRepository() async throws {
+		guard let repository: Repository = try await requestManager?.perform(RepositoryRequestMock.getRepository) else {
+			XCTFail("❌ could not create repository object")
+			return
+		}
+
+		XCTAssertEqual(repository.name, "repo1")
+		XCTAssertEqual(repository.hasIssues, false)
+		XCTAssertEqual(repository.forks, 22)
+		XCTAssertEqual(repository.watchers, 500)
+		XCTAssertEqual(repository.openIssues, 0)
+		let expectedDate = dateFormatter?.date(from: "2015-01-15T13:57:25Z")
+		XCTAssertEqual(repository.pushedAt, expectedDate)
+
+		let owner = repository.owner
+		XCTAssertEqual(owner.login, "JulianSchenkemeyer")
+		XCTAssertEqual(owner.avatarUrl, "https://avatars.githubusercontent.com/u/10547673?v=4")
+	}
+
+	func testGetRepositories() async throws {
+		guard let repositories: [Repository] = try await requestManager?.perform(RepositoryRequestMock.getRepositories) else {
+			XCTFail("❌ could not create repository object")
+			return
+		}
+
+		XCTAssertEqual(repositories.count, 2)
+
+		let first = repositories.first
+		XCTAssertEqual(first?.name, "repo1")
+
+		let last = repositories.last
+		XCTAssertEqual(last?.name, "repo2")
+	}
 }
 
