@@ -45,6 +45,7 @@
 		B950B6B62936A77B00543BB5 /* SearchRepositoriesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */; };
 		B950B6B72936A77B00543BB5 /* SearchRepositoriesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */; };
 		B950B6BB293885E400543BB5 /* GetRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6BA293885E400543BB5 /* GetRequestMock.swift */; };
+		B950B6BF293BA54A00543BB5 /* GWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6BE293BA54A00543BB5 /* GWButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B950B6B22936A75900543BB5 /* SearchUsersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchUsersMock.json; sourceTree = "<group>"; };
 		B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchRepositoriesMock.json; sourceTree = "<group>"; };
 		B950B6BA293885E400543BB5 /* GetRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestMock.swift; sourceTree = "<group>"; };
+		B950B6BE293BA54A00543BB5 /* GWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +136,13 @@
 		B9369295292D6D4900DA9419 /* GitHub-Watcher */ = {
 			isa = PBXGroup;
 			children = (
+				B950B6BD293BA4E800543BB5 /* Views */,
+				B950B6BC293BA4D500543BB5 /* Screens */,
 				B950B67C2933B97000543BB5 /* Model */,
 				B950B669293374C700543BB5 /* Network */,
 				B9369296292D6D4900DA9419 /* AppDelegate.swift */,
 				B9369298292D6D4900DA9419 /* SceneDelegate.swift */,
 				B950B66529300A9F00543BB5 /* GWTabBarController.swift */,
-				B950B6612930086D00543BB5 /* FavoritesViewController.swift */,
-				B950B6632930088800543BB5 /* SearchViewController.swift */,
 				B93692A2292D6D4A00DA9419 /* Assets.xcassets */,
 				B93692A4292D6D4A00DA9419 /* LaunchScreen.storyboard */,
 				B93692A7292D6D4A00DA9419 /* Info.plist */,
@@ -232,6 +234,23 @@
 				B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B950B6BC293BA4D500543BB5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6612930086D00543BB5 /* FavoritesViewController.swift */,
+				B950B6632930088800543BB5 /* SearchViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B950B6BD293BA4E800543BB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6BE293BA54A00543BB5 /* GWButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +374,7 @@
 				B950B6802933B9BB00543BB5 /* Follower.swift in Sources */,
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
 				B9369297292D6D4900DA9419 /* AppDelegate.swift in Sources */,
+				B950B6BF293BA54A00543BB5 /* GWButton.swift in Sources */,
 				B9369299292D6D4900DA9419 /* SceneDelegate.swift in Sources */,
 				B950B66B2933755D00543BB5 /* RequestProtocol.swift in Sources */,
 				B950B66629300A9F00543BB5 /* GWTabBarController.swift in Sources */,
