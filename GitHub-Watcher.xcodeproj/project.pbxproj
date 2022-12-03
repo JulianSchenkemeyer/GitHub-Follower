@@ -46,6 +46,9 @@
 		B950B6B72936A77B00543BB5 /* SearchRepositoriesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */; };
 		B950B6BB293885E400543BB5 /* GetRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6BA293885E400543BB5 /* GetRequestMock.swift */; };
 		B950B6BF293BA54A00543BB5 /* GWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6BE293BA54A00543BB5 /* GWButton.swift */; };
+		B950B6C3293BAC4C00543BB5 /* GWTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */; };
+		B950B6C7293BAD8100543BB5 /* GWButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */; };
+		B950B6C9293BBAD100543BB5 /* GWTextfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		B950B6B52936A77B00543BB5 /* SearchRepositoriesMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchRepositoriesMock.json; sourceTree = "<group>"; };
 		B950B6BA293885E400543BB5 /* GetRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestMock.swift; sourceTree = "<group>"; };
 		B950B6BE293BA54A00543BB5 /* GWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWButton.swift; sourceTree = "<group>"; };
+		B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTextfield.swift; sourceTree = "<group>"; };
+		B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWButtonTests.swift; sourceTree = "<group>"; };
+		B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTextfieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 		B950B6862933CA5D00543BB5 /* GitHub-WatcherTests */ = {
 			isa = PBXGroup;
 			children = (
+				B950B6C4293BAD4500543BB5 /* UI */,
 				B950B68E2933D1DD00543BB5 /* API */,
 			);
 			path = "GitHub-WatcherTests";
@@ -249,6 +256,24 @@
 			isa = PBXGroup;
 			children = (
 				B950B6BE293BA54A00543BB5 /* GWButton.swift */,
+				B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B950B6C4293BAD4500543BB5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6C5293BAD4E00543BB5 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B950B6C5293BAD4E00543BB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */,
+				B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +411,7 @@
 				B950B67129337C3200543BB5 /* NetworkError.swift in Sources */,
 				B950B6792933A05400543BB5 /* DataParser.swift in Sources */,
 				B950B66D2933756C00543BB5 /* RequestType.swift in Sources */,
+				B950B6C3293BAC4C00543BB5 /* GWTextfield.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +422,8 @@
 				B950B6912933D21B00543BB5 /* APIManagerMock.swift in Sources */,
 				B950B6952933D94D00543BB5 /* RequestManagerTests.swift in Sources */,
 				B950B69F2935E93300543BB5 /* CreateUrlRequestTests.swift in Sources */,
+				B950B6C9293BBAD100543BB5 /* GWTextfieldTests.swift in Sources */,
+				B950B6C7293BAD8100543BB5 /* GWButtonTests.swift in Sources */,
 				B950B6BB293885E400543BB5 /* GetRequestMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
