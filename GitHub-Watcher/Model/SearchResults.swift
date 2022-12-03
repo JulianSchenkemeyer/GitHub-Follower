@@ -16,7 +16,7 @@ struct UserSearchResults: SearchResults, Codable {
 	var totalCount: Int
 	var incompleteResults: Bool
 
-	let items: [User]
+	let items: [Owner]
 }
 
 struct RepositorySearchResults: SearchResults, Codable {

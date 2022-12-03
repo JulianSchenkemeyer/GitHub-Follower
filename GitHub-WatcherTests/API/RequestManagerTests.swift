@@ -22,7 +22,7 @@ final class RequestManagerTests: XCTestCase {
 	}
 
 	func testGetFollowers() async throws {
-		guard let followers: [Follower] = try await requestManager?.perform(UserRequestMock.getFollowers) else {
+		guard let followers: [Follower] = try await requestManager?.perform(GetRequestMock.get(filename: "FollowersMock")) else {
 			XCTFail("❌ did not get data from request manager")
 			return
 		}
@@ -37,7 +37,7 @@ final class RequestManagerTests: XCTestCase {
 	}
 
 	func testGetUserInfo() async throws {
-		guard let user: User = try await requestManager?.perform(UserRequestMock.getUserInfo) else {
+		guard let user: User = try await requestManager?.perform(GetRequestMock.get(filename: "UserInfoMock")) else {
 			XCTFail("❌ did not get data from request manager")
 			return
 		}
@@ -57,7 +57,7 @@ final class RequestManagerTests: XCTestCase {
 	}
 
 	func testGetRepository() async throws {
-		guard let repository: Repository = try await requestManager?.perform(RepositoryRequestMock.getRepository) else {
+		guard let repository: Repository = try await requestManager?.perform(GetRequestMock.get(filename: "RepositoryMock")) else {
 			XCTFail("❌ could not create repository object")
 			return
 		}
@@ -76,7 +76,7 @@ final class RequestManagerTests: XCTestCase {
 	}
 
 	func testGetRepositories() async throws {
-		guard let repositories: [Repository] = try await requestManager?.perform(RepositoryRequestMock.getRepositories) else {
+		guard let repositories: [Repository] = try await requestManager?.perform(GetRequestMock.get(filename: "RepositoriesMock")) else {
 			XCTFail("❌ could not create repository object")
 			return
 		}
@@ -87,6 +87,40 @@ final class RequestManagerTests: XCTestCase {
 		XCTAssertEqual(first?.name, "repo1")
 
 		let last = repositories.last
+		XCTAssertEqual(last?.name, "repo2")
+	}
+
+	func testGetSearchResultForUsers() async throws {
+		guard let searchUsersResult: UserSearchResults = try await requestManager?.perform(GetRequestMock.get(filename: "SearchUsersMock")) else {
+			XCTFail("❌ could not create repository object")
+			return
+		}
+
+		XCTAssertEqual(searchUsersResult.totalCount, 2)
+		XCTAssertEqual(searchUsersResult.incompleteResults, false)
+		XCTAssertEqual(searchUsersResult.items.count, 2)
+
+		let first = searchUsersResult.items.first
+		XCTAssertEqual(first?.login, "user1")
+
+		let last = searchUsersResult.items.last
+		XCTAssertEqual(last?.login, "user2")
+	}
+
+	func testGetSearchResultForRepositories() async throws {
+		guard let searchRepositoriesResult: RepositorySearchResults = try await requestManager?.perform(GetRequestMock.get(filename: "SearchRepositoriesMock")) else {
+			XCTFail("❌ could not create repository object")
+			return
+		}
+
+		XCTAssertEqual(searchRepositoriesResult.totalCount, 2)
+		XCTAssertEqual(searchRepositoriesResult.incompleteResults, false)
+		XCTAssertEqual(searchRepositoriesResult.items.count, 2)
+
+		let first = searchRepositoriesResult.items.first
+		XCTAssertEqual(first?.name, "repo1")
+
+		let last = searchRepositoriesResult.items.last
 		XCTAssertEqual(last?.name, "repo2")
 	}
 }
