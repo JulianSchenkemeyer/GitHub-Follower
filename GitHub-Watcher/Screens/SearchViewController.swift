@@ -9,24 +9,57 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-	let labelView = UILabel()
+	let imageView = UIImageView()
+	let searchTextfield = GWTextfield(placeholder: "Enter Your Searchterm")
+	let callToActionButton = GWButton(color: .systemCyan, title: "Search")
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		configure()
+	}
 
+	private func configure() {
 		view.backgroundColor = .systemBackground
 
-		labelView.text = "SearchViewController"
+		configureImageView()
+		configureSearchTextfield()
+		configureCallToActionButton()
+	}
 
-		view.addSubview(labelView)
-		labelView.translatesAutoresizingMaskIntoConstraints = false
+	private func configureImageView() {
+		view.addSubview(imageView)
+
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		imageView.image = UIImage(systemName: "magnifyingglass.circle.fill",
+								  withConfiguration: UIImage.SymbolConfiguration(paletteColors: [.systemBackground, .systemCyan]))
 
 		NSLayoutConstraint.activate([
-			labelView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			labelView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+			imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+			imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			imageView.heightAnchor.constraint(equalToConstant: 200),
+			imageView.widthAnchor.constraint(equalToConstant: 200)
 		])
 	}
 
+	private func configureSearchTextfield() {
+		view.addSubview(searchTextfield)
 
+		NSLayoutConstraint.activate([
+			searchTextfield.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 50),
+			searchTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+			searchTextfield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+			searchTextfield.heightAnchor.constraint(equalToConstant: 50)
+		])
+	}
+
+	private func configureCallToActionButton() {
+		view.addSubview(callToActionButton)
+
+		NSLayoutConstraint.activate([
+			callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60),
+			callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+			callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+			callToActionButton.heightAnchor.constraint(equalToConstant: 50)
+		])
+	}
 }

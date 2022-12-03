@@ -18,7 +18,7 @@ class GWTabBarController: UITabBarController {
 
 	func createSearchNavigationController() -> UINavigationController {
 		let searchNavigationController = SearchViewController()
-		searchNavigationController.title = "Search"
+		searchNavigationController.title = "Search GitHub"
 		searchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
 
 		return UINavigationController(rootViewController: searchNavigationController)
