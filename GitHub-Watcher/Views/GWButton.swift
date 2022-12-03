@@ -21,8 +21,8 @@ class GWButton: UIButton {
 	convenience init(color: UIColor, title: String) {
 		self.init(frame: .zero)
 
-		set(color: color, title: title)
 		configure()
+		set(color: color, title: title)
 	}
 
 	private func configure() {
