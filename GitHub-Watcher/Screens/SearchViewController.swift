@@ -18,6 +18,25 @@ class SearchViewController: UIViewController {
 		configure()
 	}
 
+	@objc private func pushSearchResultViewController() {
+		guard let searchterm = searchTextfield.text, !searchterm.isEmpty else {
+			print("❌ no searchterm specified")
+			return
+		}
+
+		let normalizedSearchterm = searchterm.trimmingCharacters(in: .whitespacesAndNewlines)
+		guard !normalizedSearchterm.isEmpty else {
+			print("❌ no searchterm specified")
+			return
+		}
+
+		let searchResultsViewController = SearchResultsViewController()
+		searchResultsViewController.searchterm = normalizedSearchterm
+		searchResultsViewController.title = normalizedSearchterm
+
+		navigationController?.pushViewController(searchResultsViewController, animated: true)
+	}
+
 	private func configure() {
 		view.backgroundColor = .systemBackground
 
@@ -47,6 +66,7 @@ class SearchViewController: UIViewController {
 		view.addSubview(searchTextfield)
 
 		searchTextfield.returnKeyType = .search
+		searchTextfield.delegate = self
 
 		NSLayoutConstraint.activate([
 			searchTextfield.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 50),
@@ -59,6 +79,8 @@ class SearchViewController: UIViewController {
 	private func configureCallToActionButton() {
 		view.addSubview(callToActionButton)
 
+		callToActionButton.addTarget(self, action: #selector(pushSearchResultViewController), for: .touchUpInside)
+
 		NSLayoutConstraint.activate([
 			callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60),
 			callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -70,5 +92,13 @@ class SearchViewController: UIViewController {
 	private func createDissmissKeyboardTapGesture() {
 		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
 		view.addGestureRecognizer(tap)
+	}
+}
+
+extension SearchViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		pushSearchResultViewController()
+
+		return true
 	}
 }
