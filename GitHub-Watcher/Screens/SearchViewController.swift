@@ -24,6 +24,8 @@ class SearchViewController: UIViewController {
 		configureImageView()
 		configureSearchTextfield()
 		configureCallToActionButton()
+
+		createDissmissKeyboardTapGesture()
 	}
 
 	private func configureImageView() {
@@ -44,6 +46,8 @@ class SearchViewController: UIViewController {
 	private func configureSearchTextfield() {
 		view.addSubview(searchTextfield)
 
+		searchTextfield.returnKeyType = .search
+
 		NSLayoutConstraint.activate([
 			searchTextfield.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 50),
 			searchTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -61,5 +65,10 @@ class SearchViewController: UIViewController {
 			callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
 			callToActionButton.heightAnchor.constraint(equalToConstant: 50)
 		])
+	}
+
+	private func createDissmissKeyboardTapGesture() {
+		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+		view.addGestureRecognizer(tap)
 	}
 }
