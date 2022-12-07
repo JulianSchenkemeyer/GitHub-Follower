@@ -9,6 +9,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+	weak var coordinator: Coordinator!
+
 	let imageView = UIImageView()
 	let searchTextfield = GWTextfield(placeholder: "Enter Your Searchterm")
 	let callToActionButton = GWButton(color: .systemCyan, title: "Search")

@@ -9,6 +9,8 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
 
+	weak var coordinator: Coordinator!
+
 	let labelView = UILabel()
 
 	override func viewDidLoad() {

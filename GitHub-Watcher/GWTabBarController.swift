@@ -9,26 +9,13 @@ import UIKit
 
 class GWTabBarController: UITabBarController {
 
+	let searchCoordinator = SearchCoordinator()
+	let favoritesCoordinator = FavoritesCoordinator()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		UITabBar.appearance().tintColor = .systemCyan
-		viewControllers = [createSearchNavigationController(), createFavoritesListNavigationController()]
-	}
-
-	func createSearchNavigationController() -> UINavigationController {
-		let searchNavigationController = SearchViewController()
-		searchNavigationController.title = "Search GitHub"
-		searchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-
-		return UINavigationController(rootViewController: searchNavigationController)
-	}
-
-	func createFavoritesListNavigationController() -> UINavigationController {
-		let favoritesListNavigationController = FavoritesViewController()
-		favoritesListNavigationController.title = "Favorites"
-		favoritesListNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-
-		return UINavigationController(rootViewController: favoritesListNavigationController)
+		viewControllers = [searchCoordinator.navigationController, favoritesCoordinator.navigationController]
 	}
 }
