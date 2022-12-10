@@ -9,15 +9,10 @@ import Foundation
 
 struct Repository: Codable {
 	let name: String
-	let owner: Owner
+	let owner: UserReference
 	let hasIssues: Bool
 	let forks: Int
 	let watchers: Int
 	let openIssues: Int
 	let pushedAt: Date
-}
-
-struct Owner: Codable {
-	let login: String
-	let avatarUrl: String
 }
