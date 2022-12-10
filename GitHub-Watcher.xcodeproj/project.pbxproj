@@ -53,6 +53,9 @@
 		B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CD293D21F500543BB5 /* Coordinator.swift */; };
 		B950B6D0293D22AA00543BB5 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CF293D22AA00543BB5 /* SearchCoordinator.swift */; };
 		B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6D1293DDB6700543BB5 /* FavoritesCoordinator.swift */; };
+		B950B6D62941237900543BB5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6D52941237900543BB5 /* UserCell.swift */; };
+		B950B6D82941259A00543BB5 /* GWTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6D72941259A00543BB5 /* GWTitleLabel.swift */; };
+		B950B6DA2941261100543BB5 /* GWTitleLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6D92941261100543BB5 /* GWTitleLabelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		B950B6CD293D21F500543BB5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B950B6CF293D22AA00543BB5 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		B950B6D1293DDB6700543BB5 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		B950B6D52941237900543BB5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B950B6D72941259A00543BB5 /* GWTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTitleLabel.swift; sourceTree = "<group>"; };
+		B950B6D92941261100543BB5 /* GWTitleLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTitleLabelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +273,8 @@
 			children = (
 				B950B6BE293BA54A00543BB5 /* GWButton.swift */,
 				B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */,
+				B950B6D52941237900543BB5 /* UserCell.swift */,
+				B950B6D72941259A00543BB5 /* GWTitleLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			children = (
 				B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */,
 				B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */,
+				B950B6D92941261100543BB5 /* GWTitleLabelTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -417,6 +426,7 @@
 				B950B6642930088800543BB5 /* SearchViewController.swift in Sources */,
 				B950B6A129368E3800543BB5 /* RepositoryRequest.swift in Sources */,
 				B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */,
+				B950B6D82941259A00543BB5 /* GWTitleLabel.swift in Sources */,
 				B950B6802933B9BB00543BB5 /* Follower.swift in Sources */,
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
 				B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */,
@@ -429,6 +439,7 @@
 				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
 				B950B6622930086D00543BB5 /* FavoritesViewController.swift in Sources */,
+				B950B6D62941237900543BB5 /* UserCell.swift in Sources */,
 				B93692A1292D6D4900DA9419 /* GitHub_Watcher.xcdatamodeld in Sources */,
 				B950B6CB293CD77D00543BB5 /* SearchResultsViewController.swift in Sources */,
 				B950B67129337C3200543BB5 /* NetworkError.swift in Sources */,
@@ -443,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B950B6DA2941261100543BB5 /* GWTitleLabelTests.swift in Sources */,
 				B950B6912933D21B00543BB5 /* APIManagerMock.swift in Sources */,
 				B950B6952933D94D00543BB5 /* RequestManagerTests.swift in Sources */,
 				B950B69F2935E93300543BB5 /* CreateUrlRequestTests.swift in Sources */,
