@@ -145,12 +145,12 @@ final class CreateUrlRequestTest: XCTestCase {
 	}
 
 	func testCreateSearchUserRequest() throws {
-		guard let urlRequest = try? SearchRequest.findMatchingUsers(searchString: "test", page: 1).createUrlRequest() else {
+		guard let urlRequest = try? SearchRequest.findMatchingUsers(searchString: "test", page: 1, perPage: 100).createUrlRequest() else {
 			XCTFail("❌ failed to create UrlRequest")
 			return
 		}
 
-		let expectedUrl = URL(string: "https://api.github.com/search/users?q=test&per_page=100&page=1")!
+		let expectedUrl = URL(string: "https://api.github.com/search/users?q=test%20in:login&per_page=100&page=1")!
 		guard let url = urlRequest.url else {
 			XCTFail("❌ URLRequest contains no valid url")
 			return
@@ -164,12 +164,12 @@ final class CreateUrlRequestTest: XCTestCase {
 	}
 
 	func testCreateSearchRepoRequest() throws {
-		guard let urlRequest = try? SearchRequest.findMatchingRepositories(searchString: "test", page: 1).createUrlRequest() else {
+		guard let urlRequest = try? SearchRequest.findMatchingRepositories(searchString: "test", page: 1, perPage: 100).createUrlRequest() else {
 			XCTFail("❌ failed to create UrlRequest")
 			return
 		}
 
-		let expectedUrl = URL(string: "https://api.github.com/search/repositories?q=test&per_page=100&page=1")!
+		let expectedUrl = URL(string: "https://api.github.com/search/repositories?q=test%20in:name&per_page=100&page=1")!
 		guard let url = urlRequest.url else {
 			XCTFail("❌ URLRequest contains no valid url")
 			return

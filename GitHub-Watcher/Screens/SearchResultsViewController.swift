@@ -34,7 +34,7 @@ class SearchResultsViewController: UIViewController {
 
 	private func searchUsers() {
 		Task {
-			guard let users: UserSearchResults = try await requestManager.perform(SearchRequest.findMatchingUsers(searchString: searchterm, page: 1)) else {
+			guard let users: UserSearchResults = try await requestManager.perform(SearchRequest.findMatchingUsers(searchString: searchterm, page: 1, perPage: 5)) else {
 				return
 			}
 			self.users = users.items
