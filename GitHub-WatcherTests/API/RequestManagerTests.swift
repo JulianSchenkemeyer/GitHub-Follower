@@ -22,7 +22,7 @@ final class RequestManagerTests: XCTestCase {
 	}
 
 	func testGetFollowers() async throws {
-		guard let followers: [Follower] = try await requestManager?.perform(GetRequestMock.get(filename: "FollowersMock")) else {
+		guard let followers: [UserReference] = try await requestManager?.perform(GetRequestMock.get(filename: "FollowersMock")) else {
 			XCTFail("❌ did not get data from request manager")
 			return
 		}

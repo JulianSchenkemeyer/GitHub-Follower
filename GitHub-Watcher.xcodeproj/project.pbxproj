@@ -24,7 +24,7 @@
 		B950B6792933A05400543BB5 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6782933A05400543BB5 /* DataParser.swift */; };
 		B950B67B2933B6BA00543BB5 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67A2933B6BA00543BB5 /* UserRequest.swift */; };
 		B950B67E2933B9A600543BB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67D2933B9A600543BB5 /* User.swift */; };
-		B950B6802933B9BB00543BB5 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67F2933B9BB00543BB5 /* Follower.swift */; };
+		B950B6802933B9BB00543BB5 /* UserReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B67F2933B9BB00543BB5 /* UserReference.swift */; };
 		B950B6912933D21B00543BB5 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6902933D21B00543BB5 /* APIManagerMock.swift */; };
 		B950B6952933D94D00543BB5 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6942933D94D00543BB5 /* RequestManagerTests.swift */; };
 		B950B6982933D9D000543BB5 /* FollowersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B950B6972933D9D000543BB5 /* FollowersMock.json */; };
@@ -88,7 +88,7 @@
 		B950B6782933A05400543BB5 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		B950B67A2933B6BA00543BB5 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		B950B67D2933B9A600543BB5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B950B67F2933B9BB00543BB5 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		B950B67F2933B9BB00543BB5 /* UserReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReference.swift; sourceTree = "<group>"; };
 		B950B6852933CA5D00543BB5 /* GitHub-WatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub-WatcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950B6902933D21B00543BB5 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 		B950B6942933D94D00543BB5 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B950B67D2933B9A600543BB5 /* User.swift */,
-				B950B67F2933B9BB00543BB5 /* Follower.swift */,
+				B950B67F2933B9BB00543BB5 /* UserReference.swift */,
 				B950B6A42936956B00543BB5 /* Repository.swift */,
 				B950B6AA293697CE00543BB5 /* SearchResults.swift */,
 			);
@@ -427,7 +427,7 @@
 				B950B6A129368E3800543BB5 /* RepositoryRequest.swift in Sources */,
 				B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */,
 				B950B6D82941259A00543BB5 /* GWTitleLabel.swift in Sources */,
-				B950B6802933B9BB00543BB5 /* Follower.swift in Sources */,
+				B950B6802933B9BB00543BB5 /* UserReference.swift in Sources */,
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
 				B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */,
 				B9369297292D6D4900DA9419 /* AppDelegate.swift in Sources */,

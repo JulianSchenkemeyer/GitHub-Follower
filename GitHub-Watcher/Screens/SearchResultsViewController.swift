@@ -14,11 +14,11 @@ class SearchResultsViewController: UIViewController {
 	}
 
 	var searchterm: String!
-	var users: [Owner] = []
+	var users: [UserReference] = []
 
 	let requestManager = RequestManager()
 	var collectionView: UICollectionView!
-	var dataSource: UICollectionViewDiffableDataSource<Section, Owner>!
+	var dataSource: UICollectionViewDiffableDataSource<Section, UserReference>!
 
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.navigationBar.isHidden = false
@@ -74,7 +74,7 @@ class SearchResultsViewController: UIViewController {
 	}
 
 	private func configureDataSource() {
-		dataSource = UICollectionViewDiffableDataSource<Section, Owner>(collectionView: collectionView, cellProvider: {
+		dataSource = UICollectionViewDiffableDataSource<Section, UserReference>(collectionView: collectionView, cellProvider: {
 			(collectionView, indexPath, owner) -> UICollectionViewCell? in
 
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCell.reuseId, for: indexPath) as! UserCell
@@ -86,7 +86,7 @@ class SearchResultsViewController: UIViewController {
 	}
 
 	private func updateData() {
-		var snapshot = NSDiffableDataSourceSnapshot<Section, Owner>()
+		var snapshot = NSDiffableDataSourceSnapshot<Section, UserReference>()
 		snapshot.appendSections([.user])
 		snapshot.appendItems(users, toSection: .user)
 		dataSource.apply(snapshot, animatingDifferences: true)
