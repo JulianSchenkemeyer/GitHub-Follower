@@ -10,6 +10,7 @@ import UIKit
 
 protocol SearchCoordinatorProtocol: Coordinator {
 	func findResults(for searchterm: String)
+	func openDetails(for username: String)
 }
 
 final class SearchCoordinator: SearchCoordinatorProtocol {
@@ -29,9 +30,19 @@ final class SearchCoordinator: SearchCoordinatorProtocol {
 
 	func findResults(for searchterm: String) {
 		let searchResultsViewController = SearchResultsViewController()
+		searchResultsViewController.coordinator = self
 		searchResultsViewController.searchterm = searchterm
 		searchResultsViewController.title = searchterm
 
 		navigationController.pushViewController(searchResultsViewController, animated: true)
+	}
+
+	func openDetails(for username: String) {
+		let userDetailsViewController = UserDetailViewController()
+		userDetailsViewController.coordinator = self
+		userDetailsViewController.username = username
+		userDetailsViewController.title = username
+
+		navigationController.pushViewController(userDetailsViewController, animated: true)
 	}
 }

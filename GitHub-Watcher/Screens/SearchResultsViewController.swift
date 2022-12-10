@@ -13,6 +13,8 @@ class SearchResultsViewController: UIViewController {
 		case user, repository
 	}
 
+	var coordinator: SearchCoordinatorProtocol!
+
 	var searchterm: String!
 	var users: [UserReference] = []
 
@@ -34,7 +36,7 @@ class SearchResultsViewController: UIViewController {
 
 	private func searchUsers() {
 		Task {
-			guard let users: UserSearchResults = try await requestManager.perform(SearchRequest.findMatchingUsers(searchString: searchterm, page: 1, perPage: 5)) else {
+			guard let users: UserSearchResults = try await requestManager.perform(SearchRequest.findMatchingUsers(searchString: searchterm, page: 1, perPage: 50)) else {
 				return
 			}
 			self.users = users.items
@@ -67,6 +69,7 @@ class SearchResultsViewController: UIViewController {
 
 	private func configureCollectionView() {
 		collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: configureFlowLayout())
+		collectionView.delegate = self
 
 		view.addSubview(collectionView)
 		collectionView.backgroundColor = .systemBackground
@@ -90,5 +93,15 @@ class SearchResultsViewController: UIViewController {
 		snapshot.appendSections([.user])
 		snapshot.appendItems(users, toSection: .user)
 		dataSource.apply(snapshot, animatingDifferences: true)
+	}
+}
+
+extension SearchResultsViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+		let selectedUser = users[indexPath.item]
+		print(selectedUser)
+
+		coordinator.openDetails(for: selectedUser.login)
 	}
 }
