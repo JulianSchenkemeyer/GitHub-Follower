@@ -9,16 +9,21 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-	weak var coordinator: Coordinator!
+	weak var coordinator: SearchCoordinatorProtocol!
 
 	let imageView = UIImageView()
 	let searchTextfield = GWTextfield(placeholder: "Enter Your Searchterm")
 	let callToActionButton = GWButton(color: .systemCyan, title: "Search")
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.navigationBar.isHidden = true
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configure()
 	}
+
 
 	@objc private func pushSearchResultViewController() {
 		guard let searchterm = searchTextfield.text, !searchterm.isEmpty else {
@@ -32,11 +37,7 @@ class SearchViewController: UIViewController {
 			return
 		}
 
-		let searchResultsViewController = SearchResultsViewController()
-		searchResultsViewController.searchterm = normalizedSearchterm
-		searchResultsViewController.title = normalizedSearchterm
-
-		navigationController?.pushViewController(searchResultsViewController, animated: true)
+		coordinator.findResults(for: normalizedSearchterm)
 	}
 
 	private func configure() {

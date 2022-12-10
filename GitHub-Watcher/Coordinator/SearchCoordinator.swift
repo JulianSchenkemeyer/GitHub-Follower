@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-final class SearchCoordinator: Coordinator {
+protocol SearchCoordinatorProtocol: Coordinator {
+	func findResults(for searchterm: String)
+}
+
+final class SearchCoordinator: SearchCoordinatorProtocol {
 	var navigationController: UINavigationController
 
 	init(navigationController: UINavigationController = UINavigationController()) {
@@ -21,5 +25,13 @@ final class SearchCoordinator: Coordinator {
 		searchNavigationController.coordinator = self
 
 		navigationController.viewControllers = [searchNavigationController]
+	}
+
+	func findResults(for searchterm: String) {
+		let searchResultsViewController = SearchResultsViewController()
+		searchResultsViewController.searchterm = searchterm
+		searchResultsViewController.title = searchterm
+
+		navigationController.pushViewController(searchResultsViewController, animated: true)
 	}
 }
