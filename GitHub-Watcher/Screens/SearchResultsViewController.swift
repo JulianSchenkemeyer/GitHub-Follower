@@ -13,7 +13,7 @@ class SearchResultsViewController: UIViewController {
 		case user, repository
 	}
 
-	var coordinator: SearchCoordinatorProtocol!
+	weak var coordinator: SearchCoordinatorProtocol!
 
 	var searchterm: String!
 	var users: [UserReference] = []
