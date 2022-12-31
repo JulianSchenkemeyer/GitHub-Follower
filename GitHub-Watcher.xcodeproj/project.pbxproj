@@ -59,6 +59,7 @@
 		B950B6DC294520AB00543BB5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6DB294520AB00543BB5 /* UserDetailViewController.swift */; };
 		B951E5C1295B595C00893887 /* GWBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C0295B595C00893887 /* GWBodyLabel.swift */; };
 		B951E5C3295B5A2F00893887 /* GWBodyLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */; };
+		B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		B950B6DB294520AB00543BB5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		B951E5C0295B595C00893887 /* GWBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabel.swift; sourceTree = "<group>"; };
 		B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabelTests.swift; sourceTree = "<group>"; };
+		B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWUserHeaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,11 +280,11 @@
 		B950B6BD293BA4E800543BB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B950B6BE293BA54A00543BB5 /* GWButton.swift */,
+				B951E5CB295E181500893887 /* Child ViewControllers */,
+				B951E5CA295E17E800893887 /* Cells */,
+				B951E5C9295E17DA00893887 /* Buttons */,
+				B951E5C8295E17C000893887 /* Labels */,
 				B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */,
-				B950B6D52941237900543BB5 /* UserCell.swift */,
-				B950B6D72941259A00543BB5 /* GWTitleLabel.swift */,
-				B951E5C0295B595C00893887 /* GWBodyLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +316,39 @@
 				B950B6D1293DDB6700543BB5 /* FavoritesCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B951E5C8295E17C000893887 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6D72941259A00543BB5 /* GWTitleLabel.swift */,
+				B951E5C0295B595C00893887 /* GWBodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		B951E5C9295E17DA00893887 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6BE293BA54A00543BB5 /* GWButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B951E5CA295E17E800893887 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B950B6D52941237900543BB5 /* UserCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B951E5CB295E181500893887 /* Child ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */,
+			);
+			path = "Child ViewControllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +465,7 @@
 			files = (
 				B950B67429339BA700543BB5 /* APIManager.swift in Sources */,
 				B950B67B2933B6BA00543BB5 /* UserRequest.swift in Sources */,
+				B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */,
 				B950B6AB293697CE00543BB5 /* SearchResults.swift in Sources */,
 				B950B6A9293697B000543BB5 /* SearchRequest.swift in Sources */,
 				B950B6642930088800543BB5 /* SearchViewController.swift in Sources */,
