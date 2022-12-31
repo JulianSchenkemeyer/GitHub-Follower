@@ -60,6 +60,7 @@
 		B951E5C1295B595C00893887 /* GWBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C0295B595C00893887 /* GWBodyLabel.swift */; };
 		B951E5C3295B5A2F00893887 /* GWBodyLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */; };
 		B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */; };
+		B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		B951E5C0295B595C00893887 /* GWBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabel.swift; sourceTree = "<group>"; };
 		B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabelTests.swift; sourceTree = "<group>"; };
 		B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWUserHeaderViewController.swift; sourceTree = "<group>"; };
+		B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWPublicRepositoriesInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */,
+				B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */,
 			);
 			path = "Child ViewControllers";
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
 				B950B6622930086D00543BB5 /* FavoritesViewController.swift in Sources */,
+				B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */,
 				B950B6D62941237900543BB5 /* UserCell.swift in Sources */,
 				B93692A1292D6D4900DA9419 /* GitHub_Watcher.xcdatamodeld in Sources */,
 				B950B6CB293CD77D00543BB5 /* SearchResultsViewController.swift in Sources */,
