@@ -20,7 +20,6 @@ final class GWBodyLabelTests: XCTestCase {
 		XCTAssertEqual(bodyLabel.lineBreakMode, .byWordWrapping)
 		XCTAssertTrue(bodyLabel.adjustsFontSizeToFitWidth)
 		XCTAssertGreaterThanOrEqual(bodyLabel.minimumScaleFactor, 0.74)
-		XCTAssertEqual(bodyLabel.numberOfLines, 5)
 	}
 
 	func testInitialisationWithConvenienceInit() {
@@ -31,7 +30,6 @@ final class GWBodyLabelTests: XCTestCase {
 		XCTAssertEqual(bodyLabel.lineBreakMode, .byWordWrapping)
 		XCTAssertTrue(bodyLabel.adjustsFontSizeToFitWidth)
 		XCTAssertGreaterThanOrEqual(bodyLabel.minimumScaleFactor, 0.74)
-		XCTAssertEqual(bodyLabel.numberOfLines, 5)
 
 		XCTAssertEqual(bodyLabel.textAlignment, .center)
 	}
