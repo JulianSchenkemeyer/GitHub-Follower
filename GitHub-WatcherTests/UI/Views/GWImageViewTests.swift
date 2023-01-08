@@ -9,11 +9,13 @@ import XCTest
 import Foundation
 @testable import GitHub_Watcher
 
-final class GWImageView: XCTestCase {
+final class GWImageViewTests: XCTestCase {
 
 	func testDefaultInitialisation() {
-		let imageView = GWImageView()
+		let imageView = GWImageView(frame: .zero)
 
-		XCTAssert(imageView.image)
+		XCTAssertEqual(imageView.imageCache, Cache.shared.images)
 	}
+
+	//TODO: Test download method
 }
