@@ -61,6 +61,12 @@
 		B951E5C3295B5A2F00893887 /* GWBodyLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */; };
 		B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */; };
 		B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */; };
+		B951E5D32964D48900893887 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D22964D48900893887 /* DataRequest.swift */; };
+		B951E5D52967722100893887 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D42967722000893887 /* Cache.swift */; };
+		B951E5D82967736600893887 /* GWImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D72967736600893887 /* GWImageView.swift */; };
+		B951E5DB296B2AFE00893887 /* GWAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DA296B2AFE00893887 /* GWAvatarImageView.swift */; };
+		B951E5DD296B307600893887 /* GWImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DC296B307600893887 /* GWImageViewTests.swift */; };
+		B951E5DF296B337900893887 /* GWAvatarImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +131,12 @@
 		B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabelTests.swift; sourceTree = "<group>"; };
 		B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWUserHeaderViewController.swift; sourceTree = "<group>"; };
 		B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWPublicRepositoriesInfoViewController.swift; sourceTree = "<group>"; };
+		B951E5D22964D48900893887 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		B951E5D42967722000893887 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		B951E5D72967736600893887 /* GWImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWImageView.swift; sourceTree = "<group>"; };
+		B951E5DA296B2AFE00893887 /* GWAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageView.swift; sourceTree = "<group>"; };
+		B951E5DC296B307600893887 /* GWImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWImageViewTests.swift; sourceTree = "<group>"; };
+		B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +197,7 @@
 		B950B669293374C700543BB5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B951E5D62967722900893887 /* Caches */,
 				B950B6772933A02A00543BB5 /* Parser */,
 				B950B67229339B8D00543BB5 /* Requests */,
 				B950B66E293376AB00543BB5 /* APIConstants.swift */,
@@ -203,6 +216,7 @@
 				B950B67A2933B6BA00543BB5 /* UserRequest.swift */,
 				B950B6A029368E3800543BB5 /* RepositoryRequest.swift */,
 				B950B6A8293697B000543BB5 /* SearchRequest.swift */,
+				B951E5D22964D48900893887 /* DataRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -287,6 +301,7 @@
 				B951E5C9295E17DA00893887 /* Buttons */,
 				B951E5C8295E17C000893887 /* Labels */,
 				B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */,
+				B951E5D9296B2AE300893887 /* Images */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +321,8 @@
 				B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */,
 				B950B6D92941261100543BB5 /* GWTitleLabelTests.swift */,
 				B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */,
+				B951E5DC296B307600893887 /* GWImageViewTests.swift */,
+				B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +369,23 @@
 				B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */,
 			);
 			path = "Child ViewControllers";
+			sourceTree = "<group>";
+		};
+		B951E5D62967722900893887 /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+				B951E5D42967722000893887 /* Cache.swift */,
+			);
+			path = Caches;
+			sourceTree = "<group>";
+		};
+		B951E5D9296B2AE300893887 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B951E5D72967736600893887 /* GWImageView.swift */,
+				B951E5DA296B2AFE00893887 /* GWAvatarImageView.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,10 +501,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B950B67429339BA700543BB5 /* APIManager.swift in Sources */,
+				B951E5DB296B2AFE00893887 /* GWAvatarImageView.swift in Sources */,
 				B950B67B2933B6BA00543BB5 /* UserRequest.swift in Sources */,
 				B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */,
 				B950B6AB293697CE00543BB5 /* SearchResults.swift in Sources */,
 				B950B6A9293697B000543BB5 /* SearchRequest.swift in Sources */,
+				B951E5D52967722100893887 /* Cache.swift in Sources */,
 				B950B6642930088800543BB5 /* SearchViewController.swift in Sources */,
 				B950B6A129368E3800543BB5 /* RepositoryRequest.swift in Sources */,
 				B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */,
@@ -488,6 +524,7 @@
 				B950B6A52936956B00543BB5 /* Repository.swift in Sources */,
 				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
+				B951E5D32964D48900893887 /* DataRequest.swift in Sources */,
 				B950B6622930086D00543BB5 /* FavoritesViewController.swift in Sources */,
 				B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */,
 				B950B6D62941237900543BB5 /* UserCell.swift in Sources */,
@@ -495,6 +532,7 @@
 				B950B6CB293CD77D00543BB5 /* SearchResultsViewController.swift in Sources */,
 				B950B67129337C3200543BB5 /* NetworkError.swift in Sources */,
 				B950B6D0293D22AA00543BB5 /* SearchCoordinator.swift in Sources */,
+				B951E5D82967736600893887 /* GWImageView.swift in Sources */,
 				B950B6792933A05400543BB5 /* DataParser.swift in Sources */,
 				B950B66D2933756C00543BB5 /* RequestType.swift in Sources */,
 				B950B6C3293BAC4C00543BB5 /* GWTextfield.swift in Sources */,
@@ -510,6 +548,8 @@
 				B950B6912933D21B00543BB5 /* APIManagerMock.swift in Sources */,
 				B950B6952933D94D00543BB5 /* RequestManagerTests.swift in Sources */,
 				B950B69F2935E93300543BB5 /* CreateUrlRequestTests.swift in Sources */,
+				B951E5DF296B337900893887 /* GWAvatarImageViewTests.swift in Sources */,
+				B951E5DD296B307600893887 /* GWImageViewTests.swift in Sources */,
 				B950B6C9293BBAD100543BB5 /* GWTextfieldTests.swift in Sources */,
 				B950B6C7293BAD8100543BB5 /* GWButtonTests.swift in Sources */,
 				B950B6BB293885E400543BB5 /* GetRequestMock.swift in Sources */,
