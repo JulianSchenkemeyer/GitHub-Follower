@@ -41,8 +41,13 @@ class SearchResultsViewController: UIViewController {
 			self.users = users.items
 			updateData()
 		}
+	}
 
-
+	private func updateData() {
+		var snapshot = NSDiffableDataSourceSnapshot<Section, UserReference>()
+		snapshot.appendSections([.user])
+		snapshot.appendItems(users, toSection: .user)
+		dataSource.apply(snapshot, animatingDifferences: true)
 	}
 
 	private func configure() {
@@ -76,13 +81,6 @@ class SearchResultsViewController: UIViewController {
 
 			return cell
 		})
-	}
-
-	private func updateData() {
-		var snapshot = NSDiffableDataSourceSnapshot<Section, UserReference>()
-		snapshot.appendSections([.user])
-		snapshot.appendItems(users, toSection: .user)
-		dataSource.apply(snapshot, animatingDifferences: true)
 	}
 }
 

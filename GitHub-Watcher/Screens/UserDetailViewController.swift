@@ -33,10 +33,10 @@ class UserDetailViewController: UIViewController {
 		childVC.didMove(toParent: self)
 
 		NSLayoutConstraint.activate([
-			childVC.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
+			childVC.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
 			childVC.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
 			childVC.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-			childVC.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20)
+			childVC.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10)
 		])
 	}
 
@@ -44,21 +44,19 @@ class UserDetailViewController: UIViewController {
 		view.backgroundColor = .systemBackground
 
 		configureVStackView()
-		configureUIView(headerView, with: 300)
-		configureUIView(repositoryInfoView, with: 210)
-
-		vStackView.setCustomSpacing(300, after: repositoryInfoView)
-		vStackView.addArrangedSubview(spacerView)
+		configureUIView(headerView, with: 270)
+		configureUIView(repositoryInfoView, with: 180)
 
 		add(childVC: GWUserHeaderViewController(), to: headerView)
 		add(childVC: GWPublicRepositoriesInfoViewController(), to: repositoryInfoView)
+
+		adjustHeightOfVStack()
 	}
 
 	private func configureVStackView() {
 		view.addSubview(vStackView)
 		vStackView.translatesAutoresizingMaskIntoConstraints = false
 		vStackView.axis = .vertical
-//		vStackView.distribution = .equalSpacing
 		vStackView.alignment = .top
 		vStackView.spacing = 0
 
@@ -66,8 +64,12 @@ class UserDetailViewController: UIViewController {
 			vStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 			vStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			vStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-			vStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 		])
+	}
+
+	private func adjustHeightOfVStack() {
+		let vStackBottom = vStackView.heightAnchor.constraint(greaterThanOrEqualTo: repositoryInfoView.heightAnchor, multiplier: 1.5)
+		vStackView.addConstraint(vStackBottom)
 	}
 
 	private func configureUIView(_ view: UIView, with itemHeight: CGFloat) {
@@ -75,7 +77,7 @@ class UserDetailViewController: UIViewController {
 		view.translatesAutoresizingMaskIntoConstraints = false
 
 		NSLayoutConstraint.activate([
-//			view.heightAnchor.constraint(equalToConstant: itemHeight)
+			view.heightAnchor.constraint(equalToConstant: itemHeight),
 			view.leadingAnchor.constraint(equalTo: vStackView.leadingAnchor),
 			view.trailingAnchor.constraint(equalTo: vStackView.trailingAnchor)
 		])
