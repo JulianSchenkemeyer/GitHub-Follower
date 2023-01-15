@@ -11,7 +11,7 @@ class UserCell: UICollectionViewCell {
 
 	static let reuseId = "UserCell"
 
-//	let avatarImage = UIImageView()
+	let avatarImage = GWAvatarImageView(frame: .zero)
 	let nameLabel = GWTitleLabel(textAlignment: .left, fontSize: 16)
 
 	override init(frame: CGRect) {
@@ -24,20 +24,33 @@ class UserCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func set(name: String) {
+	func set(name: String, imageUrl: String) {
 		nameLabel.text = name
+		avatarImage.downloadImage(from: imageUrl)
 	}
 
 	private func configure() {
+		configureAvatarImageView()
 		configureTitleLabel()
+	}
+
+	private func configureAvatarImageView() {
+		addSubview(avatarImage)
+
+		NSLayoutConstraint.activate([
+			avatarImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+			avatarImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+			avatarImage.heightAnchor.constraint(equalToConstant: 60),
+			avatarImage.widthAnchor.constraint(equalToConstant: 60)
+		])
 	}
 
 	private func configureTitleLabel() {
 		addSubview(nameLabel)
 
 		NSLayoutConstraint.activate([
-			nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-			nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+			nameLabel.centerYAnchor.constraint(equalTo: avatarImage.centerYAnchor),
+			nameLabel.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
 			nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
 			nameLabel.heightAnchor.constraint(equalToConstant: 20)
 		])
