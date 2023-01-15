@@ -15,10 +15,13 @@ protocol RequestManagerProtocol {
 
 class RequestManager: RequestManagerProtocol {
 	let apiManager: APIManagerProtocol
+	let assetManager: AssetManagerProtocol
 	let parser: DataParserProtocol
 
-	init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser()) {
+
+	init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), assetManager: AssetManagerProtocol = AssetManager()) {
 		self.apiManager = apiManager
+		self.assetManager = assetManager
 		self.parser = parser
 	}
 
@@ -30,9 +33,9 @@ class RequestManager: RequestManagerProtocol {
 	}
 
 	func loadData(from url: String) async throws -> Data {
-		let request = DataRequest(urlString: url)
+		let request = AssetRequest(urlString: url)
 
-		let data = try await apiManager.perform(request)
+		let data = try await assetManager.perform(request)
 		return data
 	}
 }

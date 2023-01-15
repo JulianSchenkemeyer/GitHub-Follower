@@ -61,12 +61,13 @@
 		B951E5C3295B5A2F00893887 /* GWBodyLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */; };
 		B951E5CD295E18E500893887 /* GWUserHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */; };
 		B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */; };
-		B951E5D32964D48900893887 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D22964D48900893887 /* DataRequest.swift */; };
+		B951E5D32964D48900893887 /* AssetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D22964D48900893887 /* AssetRequest.swift */; };
 		B951E5D52967722100893887 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D42967722000893887 /* Cache.swift */; };
 		B951E5D82967736600893887 /* GWImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5D72967736600893887 /* GWImageView.swift */; };
 		B951E5DB296B2AFE00893887 /* GWAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DA296B2AFE00893887 /* GWAvatarImageView.swift */; };
 		B951E5DD296B307600893887 /* GWImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DC296B307600893887 /* GWImageViewTests.swift */; };
 		B951E5DF296B337900893887 /* GWAvatarImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */; };
+		B951E5E1296F588B00893887 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E0296F588B00893887 /* AssetManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,12 +132,13 @@
 		B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWBodyLabelTests.swift; sourceTree = "<group>"; };
 		B951E5CC295E18E500893887 /* GWUserHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWUserHeaderViewController.swift; sourceTree = "<group>"; };
 		B951E5CE29608C0200893887 /* GWPublicRepositoriesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWPublicRepositoriesInfoViewController.swift; sourceTree = "<group>"; };
-		B951E5D22964D48900893887 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		B951E5D22964D48900893887 /* AssetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRequest.swift; sourceTree = "<group>"; };
 		B951E5D42967722000893887 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		B951E5D72967736600893887 /* GWImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWImageView.swift; sourceTree = "<group>"; };
 		B951E5DA296B2AFE00893887 /* GWAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageView.swift; sourceTree = "<group>"; };
 		B951E5DC296B307600893887 /* GWImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWImageViewTests.swift; sourceTree = "<group>"; };
 		B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageViewTests.swift; sourceTree = "<group>"; };
+		B951E5E0296F588B00893887 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		B9369295292D6D4900DA9419 /* GitHub-Watcher */ = {
 			isa = PBXGroup;
 			children = (
+				B951E5E2296F5CDA00893887 /* Utilities */,
 				B950B6CC293D21D100543BB5 /* Coordinator */,
 				B950B6BD293BA4E800543BB5 /* Views */,
 				B950B6BC293BA4D500543BB5 /* Screens */,
@@ -204,6 +207,7 @@
 				B950B67029337C3200543BB5 /* NetworkError.swift */,
 				B950B67329339BA700543BB5 /* APIManager.swift */,
 				B950B67529339E5300543BB5 /* RequestManager.swift */,
+				B951E5E0296F588B00893887 /* AssetManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -216,7 +220,7 @@
 				B950B67A2933B6BA00543BB5 /* UserRequest.swift */,
 				B950B6A029368E3800543BB5 /* RepositoryRequest.swift */,
 				B950B6A8293697B000543BB5 /* SearchRequest.swift */,
-				B951E5D22964D48900893887 /* DataRequest.swift */,
+				B951E5D22964D48900893887 /* AssetRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -388,6 +392,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		B951E5E2296F5CDA00893887 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -519,12 +530,13 @@
 				B9369299292D6D4900DA9419 /* SceneDelegate.swift in Sources */,
 				B950B6DC294520AB00543BB5 /* UserDetailViewController.swift in Sources */,
 				B950B66B2933755D00543BB5 /* RequestProtocol.swift in Sources */,
+				B951E5E1296F588B00893887 /* AssetManager.swift in Sources */,
 				B951E5C1295B595C00893887 /* GWBodyLabel.swift in Sources */,
 				B950B66629300A9F00543BB5 /* GWTabBarController.swift in Sources */,
 				B950B6A52936956B00543BB5 /* Repository.swift in Sources */,
 				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
-				B951E5D32964D48900893887 /* DataRequest.swift in Sources */,
+				B951E5D32964D48900893887 /* AssetRequest.swift in Sources */,
 				B950B6622930086D00543BB5 /* FavoritesViewController.swift in Sources */,
 				B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */,
 				B950B6D62941237900543BB5 /* UserCell.swift in Sources */,

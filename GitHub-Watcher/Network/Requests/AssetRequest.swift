@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DataRequest: RequestProtocol {
+struct AssetRequest {
 	var path: String
 	let requestType: RequestType = .GET
 
