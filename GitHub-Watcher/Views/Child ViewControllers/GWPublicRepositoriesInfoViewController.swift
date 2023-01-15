@@ -11,14 +11,24 @@ class GWPublicRepositoriesInfoViewController: UIViewController {
 
 	let repositorySymbol = UIImageView()
 	let titleLabel = GWTitleLabel(textAlignment: .left, fontSize: 18)
-	let repositoriesCount = GWTitleLabel(textAlignment: .center, fontSize: 38)
+	let repositoriesCountLabel = GWTitleLabel(textAlignment: .center, fontSize: 38)
 	let showReporsitoriesButton = GWButton(color: .systemCyan, title: "Show Public Repositories")
 
 	let padding: CGFloat = 15
 
+	var repositoriesCount = 0
+
+	init(repositories: Int) {
+		super.init(nibName: nil, bundle: nil)
+		self.repositoriesCount = repositories
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		configure()
     }
     
@@ -65,15 +75,15 @@ class GWPublicRepositoriesInfoViewController: UIViewController {
 	}
 
 	private func configureRepositoriesCount() {
-		view.addSubview(repositoriesCount)
+		view.addSubview(repositoriesCountLabel)
 
-		repositoriesCount.text = "14"
+		repositoriesCountLabel.text = "\(repositoriesCount)"
 
 		NSLayoutConstraint.activate([
-			repositoriesCount.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-			repositoriesCount.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-			repositoriesCount.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-			repositoriesCount.heightAnchor.constraint(equalToConstant: 40)
+			repositoriesCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+			repositoriesCountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+			repositoriesCountLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+			repositoriesCountLabel.heightAnchor.constraint(equalToConstant: 40)
 		])
 	}
 
@@ -81,7 +91,7 @@ class GWPublicRepositoriesInfoViewController: UIViewController {
 		view.addSubview(showReporsitoriesButton)
 
 		NSLayoutConstraint.activate([
-			showReporsitoriesButton.topAnchor.constraint(equalTo: repositoriesCount.bottomAnchor, constant: 10),
+			showReporsitoriesButton.topAnchor.constraint(equalTo: repositoriesCountLabel.bottomAnchor, constant: 10),
 			showReporsitoriesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
 			showReporsitoriesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
 			showReporsitoriesButton.heightAnchor.constraint(equalToConstant: 50)

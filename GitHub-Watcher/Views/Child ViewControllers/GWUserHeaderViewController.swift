@@ -90,12 +90,11 @@ class GWUserHeaderViewController: UIViewController {
 
 		bioLabelView.numberOfLines = 4
 		bioLabelView.lineBreakMode = .byTruncatingTail
-		
+
 		NSLayoutConstraint.activate([
 			bioLabelView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 15),
 			bioLabelView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
 			bioLabelView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-//			bioLabelView.heightAnchor.constraint(equalToConstant: 150)
 			bioLabelView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)
 		])
 	}

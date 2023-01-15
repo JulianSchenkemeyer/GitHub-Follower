@@ -16,7 +16,6 @@ class UserDetailViewController: UIViewController {
 	let vStackView = UIStackView()
 	let headerView = UIView()
 	let repositoryInfoView = UIView()
-	let spacerView = UIView()
 
 
     override func viewDidLoad() {
@@ -39,7 +38,7 @@ class UserDetailViewController: UIViewController {
 
 	private func configureUI(for user: User) {
 		add(childVC: GWUserHeaderViewController(user: user), to: headerView)
-		add(childVC: GWPublicRepositoriesInfoViewController(), to: repositoryInfoView)
+		add(childVC: GWPublicRepositoriesInfoViewController(repositories: user.publicRepos), to: repositoryInfoView)
 
 		adjustHeightOfVStack()
 	}
