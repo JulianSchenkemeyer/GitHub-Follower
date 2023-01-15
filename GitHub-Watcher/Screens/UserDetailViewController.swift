@@ -10,6 +10,7 @@ import UIKit
 class UserDetailViewController: UIViewController {
 
 	weak var coordinator: SearchCoordinatorProtocol!
+	let requestManager = RequestManager()
 	var username: String!
 
 	let vStackView = UIStackView()
@@ -22,8 +23,26 @@ class UserDetailViewController: UIViewController {
         super.viewDidLoad()
 
 		configure()
-
+		getUserInfo()
     }
+
+	private func getUserInfo() {
+		Task {
+			do {
+				let user: User = try await requestManager.perform(UserRequest.getUserInfo(username: username))
+				configureUI(for: user)
+			} catch {
+				print("Something went wrong", error.localizedDescription)
+			}
+		}
+	}
+
+	private func configureUI(for user: User) {
+		add(childVC: GWUserHeaderViewController(user: user), to: headerView)
+		add(childVC: GWPublicRepositoriesInfoViewController(), to: repositoryInfoView)
+
+		adjustHeightOfVStack()
+	}
 
 	private func add(childVC: UIViewController, to containerView: UIView) {
 		addChild(childVC)
@@ -46,11 +65,6 @@ class UserDetailViewController: UIViewController {
 		configureVStackView()
 		configureUIView(headerView, with: 270)
 		configureUIView(repositoryInfoView, with: 180)
-
-		add(childVC: GWUserHeaderViewController(), to: headerView)
-		add(childVC: GWPublicRepositoriesInfoViewController(), to: repositoryInfoView)
-
-		adjustHeightOfVStack()
 	}
 
 	private func configureVStackView() {
@@ -81,19 +95,5 @@ class UserDetailViewController: UIViewController {
 			view.leadingAnchor.constraint(equalTo: vStackView.leadingAnchor),
 			view.trailingAnchor.constraint(equalTo: vStackView.trailingAnchor)
 		])
-	}
-
-	private func configureHeaderView() {
-		view.addSubview(headerView)
-		headerView.translatesAutoresizingMaskIntoConstraints = false
-
-		NSLayoutConstraint.activate([
-			headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-			headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-			headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-			headerView.heightAnchor.constraint(equalToConstant: 280)
-		])
-
-		add(childVC: GWUserHeaderViewController(), to: headerView)
 	}
 }

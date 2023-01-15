@@ -9,15 +9,17 @@ import UIKit
 
 class GWUserHeaderViewController: UIViewController {
 
-	let imageView = UIView()
+	let imageView = GWAvatarImageView(frame: .zero)
 	let usernameLabelView = GWTitleLabel(textAlignment: .left, fontSize: 18)
 	let userFullnameLabelView = GWTitleLabel(textAlignment: .left, fontSize: 16)
 	let bioLabelView = GWBodyLabel(textAlignment: .left)
 
-	init() {
-		super.init(nibName: nil, bundle: nil)
+	var user: User!
 
-		configure()
+
+	init(user: User) {
+		super.init(nibName: nil, bundle: nil)
+		self.user = user
 	}
 
 	required init?(coder: NSCoder) {
@@ -42,7 +44,8 @@ class GWUserHeaderViewController: UIViewController {
 
 	private func configureImageView() {
 		view.addSubview(imageView)
-		imageView.backgroundColor = .secondaryLabel
+
+		imageView.downloadImage(from: user.avatarUrl)
 		imageView.layer.cornerRadius = 18
 
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +60,7 @@ class GWUserHeaderViewController: UIViewController {
 
 	private func configureUsernameLabelView() {
 		view.addSubview(usernameLabelView)
-		usernameLabelView.text = "MaxMustermann99"
+		usernameLabelView.text = user.login
 
 		NSLayoutConstraint.activate([
 			usernameLabelView.topAnchor.constraint(equalTo: imageView.topAnchor),
@@ -69,7 +72,7 @@ class GWUserHeaderViewController: UIViewController {
 
 	private func configureUserFullnameLabelView() {
 		view.addSubview(userFullnameLabelView)
-		userFullnameLabelView.text = "Max Musterman"
+		userFullnameLabelView.text = user.name
 		usernameLabelView.textColor = .secondaryLabel
 
 		NSLayoutConstraint.activate([
@@ -83,11 +86,11 @@ class GWUserHeaderViewController: UIViewController {
 	private func configureBioLabelView() {
 		view.addSubview(bioLabelView)
 
-		bioLabelView.text = """
- Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do. –Rob Siltanen
-"""
+		bioLabelView.text = user.bio
+
 		bioLabelView.numberOfLines = 4
 		bioLabelView.lineBreakMode = .byTruncatingTail
+		
 		NSLayoutConstraint.activate([
 			bioLabelView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 15),
 			bioLabelView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
