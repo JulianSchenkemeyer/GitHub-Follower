@@ -68,6 +68,7 @@
 		B951E5DD296B307600893887 /* GWImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DC296B307600893887 /* GWImageViewTests.swift */; };
 		B951E5DF296B337900893887 /* GWAvatarImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */; };
 		B951E5E1296F588B00893887 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E0296F588B00893887 /* AssetManager.swift */; };
+		B951E5E4297446FD00893887 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E3297446FD00893887 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		B951E5DC296B307600893887 /* GWImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWImageViewTests.swift; sourceTree = "<group>"; };
 		B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageViewTests.swift; sourceTree = "<group>"; };
 		B951E5E0296F588B00893887 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		B951E5E3297446FD00893887 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +397,7 @@
 		B951E5E2296F5CDA00893887 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B951E5E3297446FD00893887 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
 				B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */,
 				B9369297292D6D4900DA9419 /* AppDelegate.swift in Sources */,
+				B951E5E4297446FD00893887 /* UIHelper.swift in Sources */,
 				B950B6BF293BA54A00543BB5 /* GWButton.swift in Sources */,
 				B9369299292D6D4900DA9419 /* SceneDelegate.swift in Sources */,
 				B950B6DC294520AB00543BB5 /* UserDetailViewController.swift in Sources */,

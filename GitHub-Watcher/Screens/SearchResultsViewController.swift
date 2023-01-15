@@ -30,7 +30,6 @@ class SearchResultsViewController: UIViewController {
         super.viewDidLoad()
 
         configure()
-
 		searchUsers()
     }
 
@@ -52,19 +51,11 @@ class SearchResultsViewController: UIViewController {
 	}
 
 	private func configureFlowLayout() -> UICollectionViewFlowLayout {
-		let width = view.bounds.width
 		let xPadding: CGFloat = 20
 		let yPadding: CGFloat = 10
+		let rowHeight: Double  = 80
 
-		let availableWidth = width - (2 * xPadding)
-		let itemWidth = availableWidth
-		let itemHeight: Double = 60
-
-		let flowLayout = UICollectionViewFlowLayout()
-		flowLayout.sectionInset = UIEdgeInsets(top: yPadding, left: xPadding, bottom: yPadding, right: xPadding)
-		flowLayout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-
-		return flowLayout
+		return UIHelper.createSingleColumnFlowLayout(in: view, with: (xPadding, yPadding), and: rowHeight)
 	}
 
 	private func configureCollectionView() {
@@ -81,8 +72,7 @@ class SearchResultsViewController: UIViewController {
 			(collectionView, indexPath, owner) -> UICollectionViewCell? in
 
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCell.reuseId, for: indexPath) as! UserCell
-			cell.set(name: owner.login)
-			cell.backgroundColor = .systemGray
+			cell.set(name: owner.login, imageUrl: owner.avatarUrl)
 
 			return cell
 		})
