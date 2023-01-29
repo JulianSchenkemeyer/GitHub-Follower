@@ -15,10 +15,10 @@ class RepositoryCell: UICollectionViewCell {
 	let ownerLabel = GWBodyLabel()
 
 	let footerHStack = UIStackView()
-	let forkView = GWLabelWithSystemImageView(symbol: .fork, title: "100")
-	let watcherView = GWLabelWithSystemImageView(symbol: .watcher, title: "10000")
-	let issuesView = GWLabelWithSystemImageView(symbol: .issues, title: "500")
-	let languageLabel = GWTitleLabel(textAlignment: .center, fontSize: 14)
+	let forkView = GWLabelWithSystemImageView(symbol: .fork)
+	let watcherView = GWLabelWithSystemImageView(symbol: .watcher)
+	let issuesView = GWLabelWithSystemImageView(symbol: .issues)
+	let languageLabel = GWTitleLabel(textAlignment: .right, fontSize: 14)
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -30,8 +30,16 @@ class RepositoryCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func set(name: String) {
-		nameLabel.text = name
+	func set(repository: Repository) {
+		nameLabel.text = repository.name
+		ownerLabel.text = repository.owner.login
+
+		forkView.set(title: "\(repository.forks)")
+		watcherView.set(title: "\(repository.watchers)")
+		let issuesCount = repository.hasIssues ? "\(repository.openIssues)" : "/"
+		issuesView.set(title: issuesCount)
+
+		languageLabel.text = repository.language ?? ""
 	}
 
 	private func configure() {
@@ -60,7 +68,6 @@ class RepositoryCell: UICollectionViewCell {
 
 	private func configureOwnerLabel() {
 		contentView.addSubview(ownerLabel)
-		ownerLabel.text = "Max Muster"
 
 		NSLayoutConstraint.activate([
 			ownerLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
@@ -92,6 +99,5 @@ class RepositoryCell: UICollectionViewCell {
 
 	private func configureLanguageLabel() {
 		footerHStack.addArrangedSubview(languageLabel)
-		languageLabel.text = "TypeScript"
 	}
 }

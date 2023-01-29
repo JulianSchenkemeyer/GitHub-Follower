@@ -77,7 +77,7 @@ class SearchRepositoriesViewController: UIViewController {
 		dataSource = UICollectionViewDiffableDataSource<Section, Repository>(collectionView: collectionView, cellProvider: { collectionView, indexPath, repository in
 
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RepositoryCell.reuseId, for: indexPath) as! RepositoryCell
-			cell.set(name: repository.name)
+			cell.set(repository: repository)
 
 			return cell
 		})
