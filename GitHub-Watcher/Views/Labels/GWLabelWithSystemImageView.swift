@@ -11,7 +11,7 @@ enum SupportedLabelSystemImages {
 	case fork, watcher, issues
 }
 
-class GWLabelWithSystemImage: UIView {
+class GWLabelWithSystemImageView: UIView {
 
 	var systemImageView: UIImageView = UIImageView()
 	var labelView = GWTitleLabel(textAlignment: .left, fontSize: 14)
@@ -70,6 +70,9 @@ class GWLabelWithSystemImage: UIView {
 
 	private func configureLabelView() {
 		addSubview(labelView)
+
+
+		labelView.text = ""
 
 		NSLayoutConstraint.activate([
 			labelView.centerYAnchor.constraint(equalTo: systemImageView.centerYAnchor),

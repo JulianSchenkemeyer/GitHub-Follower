@@ -15,9 +15,9 @@ class RepositoryCell: UICollectionViewCell {
 	let ownerLabel = GWBodyLabel()
 
 	let footerHStack = UIStackView()
-	let forkView = GWLabelWithSystemImage(symbol: .fork, title: "100")
-	let watcherView = GWLabelWithSystemImage(symbol: .watcher, title: "10000")
-	let issuesView = GWLabelWithSystemImage(symbol: .issues, title: "500")
+	let forkView = GWLabelWithSystemImageView(symbol: .fork, title: "100")
+	let watcherView = GWLabelWithSystemImageView(symbol: .watcher, title: "10000")
+	let issuesView = GWLabelWithSystemImageView(symbol: .issues, title: "500")
 	let languageLabel = GWTitleLabel(textAlignment: .center, fontSize: 14)
 
 	override init(frame: CGRect) {
