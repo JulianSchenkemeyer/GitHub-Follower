@@ -49,7 +49,7 @@
 		B950B6C3293BAC4C00543BB5 /* GWTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */; };
 		B950B6C7293BAD8100543BB5 /* GWButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */; };
 		B950B6C9293BBAD100543BB5 /* GWTextfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */; };
-		B950B6CB293CD77D00543BB5 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CA293CD77D00543BB5 /* SearchResultsViewController.swift */; };
+		B950B6CB293CD77D00543BB5 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CA293CD77D00543BB5 /* SearchUserViewController.swift */; };
 		B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CD293D21F500543BB5 /* Coordinator.swift */; };
 		B950B6D0293D22AA00543BB5 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6CF293D22AA00543BB5 /* SearchCoordinator.swift */; };
 		B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B6D1293DDB6700543BB5 /* FavoritesCoordinator.swift */; };
@@ -69,6 +69,10 @@
 		B951E5DF296B337900893887 /* GWAvatarImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */; };
 		B951E5E1296F588B00893887 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E0296F588B00893887 /* AssetManager.swift */; };
 		B951E5E4297446FD00893887 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E3297446FD00893887 /* UIHelper.swift */; };
+		B951E5E62975F56A00893887 /* SearchRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E52975F56A00893887 /* SearchRepositoriesViewController.swift */; };
+		B951E5E8297740C500893887 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E7297740C500893887 /* RepositoryCell.swift */; };
+		B951E5EA2985882500893887 /* GWLabelWithSystemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5E92985882500893887 /* GWLabelWithSystemImageView.swift */; };
+		B951E5EC2986C32300893887 /* GWLabelWithSystemImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951E5EB2986C32300893887 /* GWLabelWithSystemImageViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +125,7 @@
 		B950B6C2293BAC4C00543BB5 /* GWTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTextfield.swift; sourceTree = "<group>"; };
 		B950B6C6293BAD8100543BB5 /* GWButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWButtonTests.swift; sourceTree = "<group>"; };
 		B950B6C8293BBAD100543BB5 /* GWTextfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTextfieldTests.swift; sourceTree = "<group>"; };
-		B950B6CA293CD77D00543BB5 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		B950B6CA293CD77D00543BB5 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		B950B6CD293D21F500543BB5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B950B6CF293D22AA00543BB5 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		B950B6D1293DDB6700543BB5 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
@@ -141,6 +145,10 @@
 		B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWAvatarImageViewTests.swift; sourceTree = "<group>"; };
 		B951E5E0296F588B00893887 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		B951E5E3297446FD00893887 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		B951E5E52975F56A00893887 /* SearchRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesViewController.swift; sourceTree = "<group>"; };
+		B951E5E7297740C500893887 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		B951E5E92985882500893887 /* GWLabelWithSystemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWLabelWithSystemImageView.swift; sourceTree = "<group>"; };
+		B951E5EB2986C32300893887 /* GWLabelWithSystemImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWLabelWithSystemImageViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +301,8 @@
 			children = (
 				B950B6612930086D00543BB5 /* FavoritesViewController.swift */,
 				B950B6632930088800543BB5 /* SearchViewController.swift */,
-				B950B6CA293CD77D00543BB5 /* SearchResultsViewController.swift */,
+				B950B6CA293CD77D00543BB5 /* SearchUserViewController.swift */,
+				B951E5E52975F56A00893887 /* SearchRepositoriesViewController.swift */,
 				B950B6DB294520AB00543BB5 /* UserDetailViewController.swift */,
 			);
 			path = Screens;
@@ -329,6 +338,7 @@
 				B951E5C2295B5A2F00893887 /* GWBodyLabelTests.swift */,
 				B951E5DC296B307600893887 /* GWImageViewTests.swift */,
 				B951E5DE296B337900893887 /* GWAvatarImageViewTests.swift */,
+				B951E5EB2986C32300893887 /* GWLabelWithSystemImageViewTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +358,7 @@
 			children = (
 				B950B6D72941259A00543BB5 /* GWTitleLabel.swift */,
 				B951E5C0295B595C00893887 /* GWBodyLabel.swift */,
+				B951E5E92985882500893887 /* GWLabelWithSystemImageView.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -364,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				B950B6D52941237900543BB5 /* UserCell.swift */,
+				B951E5E7297740C500893887 /* RepositoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -523,10 +535,12 @@
 				B951E5D52967722100893887 /* Cache.swift in Sources */,
 				B950B6642930088800543BB5 /* SearchViewController.swift in Sources */,
 				B950B6A129368E3800543BB5 /* RepositoryRequest.swift in Sources */,
+				B951E5EA2985882500893887 /* GWLabelWithSystemImageView.swift in Sources */,
 				B950B6D2293DDB6700543BB5 /* FavoritesCoordinator.swift in Sources */,
 				B950B6D82941259A00543BB5 /* GWTitleLabel.swift in Sources */,
 				B950B6802933B9BB00543BB5 /* UserReference.swift in Sources */,
 				B950B67629339E5300543BB5 /* RequestManager.swift in Sources */,
+				B951E5E62975F56A00893887 /* SearchRepositoriesViewController.swift in Sources */,
 				B950B6CE293D21F500543BB5 /* Coordinator.swift in Sources */,
 				B9369297292D6D4900DA9419 /* AppDelegate.swift in Sources */,
 				B951E5E4297446FD00893887 /* UIHelper.swift in Sources */,
@@ -537,6 +551,7 @@
 				B951E5E1296F588B00893887 /* AssetManager.swift in Sources */,
 				B951E5C1295B595C00893887 /* GWBodyLabel.swift in Sources */,
 				B950B66629300A9F00543BB5 /* GWTabBarController.swift in Sources */,
+				B951E5E8297740C500893887 /* RepositoryCell.swift in Sources */,
 				B950B6A52936956B00543BB5 /* Repository.swift in Sources */,
 				B950B67E2933B9A600543BB5 /* User.swift in Sources */,
 				B950B66F293376AB00543BB5 /* APIConstants.swift in Sources */,
@@ -545,7 +560,7 @@
 				B951E5CF29608C0300893887 /* GWPublicRepositoriesInfoViewController.swift in Sources */,
 				B950B6D62941237900543BB5 /* UserCell.swift in Sources */,
 				B93692A1292D6D4900DA9419 /* GitHub_Watcher.xcdatamodeld in Sources */,
-				B950B6CB293CD77D00543BB5 /* SearchResultsViewController.swift in Sources */,
+				B950B6CB293CD77D00543BB5 /* SearchUserViewController.swift in Sources */,
 				B950B67129337C3200543BB5 /* NetworkError.swift in Sources */,
 				B950B6D0293D22AA00543BB5 /* SearchCoordinator.swift in Sources */,
 				B951E5D82967736600893887 /* GWImageView.swift in Sources */,
@@ -569,6 +584,7 @@
 				B950B6C9293BBAD100543BB5 /* GWTextfieldTests.swift in Sources */,
 				B950B6C7293BAD8100543BB5 /* GWButtonTests.swift in Sources */,
 				B950B6BB293885E400543BB5 /* GetRequestMock.swift in Sources */,
+				B951E5EC2986C32300893887 /* GWLabelWithSystemImageViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
