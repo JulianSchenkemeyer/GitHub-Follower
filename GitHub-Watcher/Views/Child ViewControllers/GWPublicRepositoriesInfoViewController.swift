@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol GWPublicRepositoriesInfoDelegate: AnyObject {
+	func didTaShowPublicRepositories()
+}
+
 class GWPublicRepositoriesInfoViewController: UIViewController {
+
+	weak var delegate: GWPublicRepositoriesInfoDelegate!
 
 	let repositorySymbol = UIImageView()
 	let titleLabel = GWTitleLabel(textAlignment: .left, fontSize: 18)
@@ -18,9 +24,10 @@ class GWPublicRepositoriesInfoViewController: UIViewController {
 
 	var repositoriesCount = 0
 
-	init(repositories: Int) {
+	init(repositories: Int, delegate: GWPublicRepositoriesInfoDelegate) {
 		super.init(nibName: nil, bundle: nil)
 		self.repositoriesCount = repositories
+		self.delegate = delegate
 	}
 
 	required init?(coder: NSCoder) {
@@ -90,11 +97,17 @@ class GWPublicRepositoriesInfoViewController: UIViewController {
 	private func configureShowReporsitoriesButton() {
 		view.addSubview(showReporsitoriesButton)
 
+		showReporsitoriesButton.addTarget(self, action: #selector(showRepositoriesButtonTapped), for: .touchUpInside)
+
 		NSLayoutConstraint.activate([
 			showReporsitoriesButton.topAnchor.constraint(equalTo: repositoriesCountLabel.bottomAnchor, constant: 10),
 			showReporsitoriesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
 			showReporsitoriesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
 			showReporsitoriesButton.heightAnchor.constraint(equalToConstant: 50)
 		])
+	}
+
+	@objc private func showRepositoriesButtonTapped() {
+		delegate.didTaShowPublicRepositories()
 	}
 }
