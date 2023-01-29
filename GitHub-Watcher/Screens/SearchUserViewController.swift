@@ -7,10 +7,10 @@
 
 import UIKit
 
-class SearchResultsViewController: UIViewController {
+class SearchUserViewController: UIViewController {
 
 	enum Section {
-		case user, repository
+		case main
 	}
 
 	weak var coordinator: SearchCoordinatorProtocol!
@@ -45,8 +45,8 @@ class SearchResultsViewController: UIViewController {
 
 	private func updateData() {
 		var snapshot = NSDiffableDataSourceSnapshot<Section, UserReference>()
-		snapshot.appendSections([.user])
-		snapshot.appendItems(users, toSection: .user)
+		snapshot.appendSections([.main])
+		snapshot.appendItems(users, toSection: .main)
 		dataSource.apply(snapshot, animatingDifferences: true)
 	}
 
@@ -84,7 +84,7 @@ class SearchResultsViewController: UIViewController {
 	}
 }
 
-extension SearchResultsViewController: UICollectionViewDelegate {
+extension SearchUserViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
 		let selectedUser = users[indexPath.item]
