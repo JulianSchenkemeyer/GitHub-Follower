@@ -38,7 +38,7 @@ class UserDetailViewController: UIViewController {
 
 	private func configureUI(for user: User) {
 		add(childVC: GWUserHeaderViewController(user: user), to: headerView)
-		add(childVC: GWPublicRepositoriesInfoViewController(repositories: user.publicRepos), to: repositoryInfoView)
+		add(childVC: GWPublicRepositoriesInfoViewController(repositories: user.publicRepos, delegate: self), to: repositoryInfoView)
 
 		adjustHeightOfVStack()
 	}
@@ -94,5 +94,11 @@ class UserDetailViewController: UIViewController {
 			view.leadingAnchor.constraint(equalTo: vStackView.leadingAnchor),
 			view.trailingAnchor.constraint(equalTo: vStackView.trailingAnchor)
 		])
+	}
+}
+
+extension UserDetailViewController: GWPublicRepositoriesInfoDelegate {
+	func didTaShowPublicRepositories() {
+		coordinator.showRepositories(for: self.username)
 	}
 }
