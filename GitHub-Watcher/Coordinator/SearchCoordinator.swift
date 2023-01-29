@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 protocol SearchCoordinatorProtocol: Coordinator {
 	func findResults(for searchterm: String)
 	func openDetails(for username: String)
 	func showRepositories(for username: String)
+	func openRepositoryInSafari(_ repositoryUrl: URL)
 }
 
 final class SearchCoordinator: SearchCoordinatorProtocol {
@@ -54,5 +56,12 @@ final class SearchCoordinator: SearchCoordinatorProtocol {
 		searchRepositoryViewController.title = username
 
 		navigationController.pushViewController(searchRepositoryViewController, animated: true)
+	}
+
+	func openRepositoryInSafari(_ repositoryUrl: URL) {
+		let safariViewController = SFSafariViewController(url: repositoryUrl)
+		safariViewController.preferredControlTintColor = .systemCyan
+
+		navigationController.present(safariViewController, animated: true)
 	}
 }

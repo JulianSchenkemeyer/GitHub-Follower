@@ -17,4 +17,6 @@ struct Repository: Codable, Hashable {
 	let watchers: Int
 	let openIssues: Int
 	let pushedAt: Date
+
+	let htmlUrl: String
 }

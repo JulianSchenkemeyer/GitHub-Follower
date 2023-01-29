@@ -85,6 +85,12 @@ class SearchRepositoriesViewController: UIViewController {
 }
 
 extension SearchRepositoriesViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+		let selectedRepository = repositories[indexPath.item]
+		let repoUrl = URL(string: selectedRepository.htmlUrl)!
+
+		coordinator.openRepositoryInSafari(repoUrl)
+	}
 }
 

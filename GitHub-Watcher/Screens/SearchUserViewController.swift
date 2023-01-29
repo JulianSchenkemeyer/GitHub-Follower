@@ -88,7 +88,6 @@ extension SearchUserViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
 		let selectedUser = users[indexPath.item]
-		print(selectedUser)
 
 		coordinator.openDetails(for: selectedUser.login)
 	}
