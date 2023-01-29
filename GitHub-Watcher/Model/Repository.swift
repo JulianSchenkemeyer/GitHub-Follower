@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Repository: Codable {
+struct Repository: Codable, Hashable {
 	let name: String
 	let owner: UserReference
+	let language: String?
+
 	let hasIssues: Bool
 	let forks: Int
 	let watchers: Int
